@@ -4,11 +4,15 @@ Summary(pl):	Modu≥y i biblioteki Utah-GLX
 Name:		glx
 Version:	20000407
 Release:	1
-Copyright:	Custom
+License:	Custom
 Group:		X11/Libraries
 Group(de):	X11/Libraries
 Group(es):	X11/Bibliotecas
+Group(fr):	X11/Librairies
 Group(pl):	X11/Biblioteki
+Group(pt_BR):	X11/Bibliotecas
+Group(ru):	X11/‚…¬Ã…œ‘≈À…
+Group(uk):	X11/‚¶¬Ã¶œ‘≈À…
 Source0:	%{name}-%{version}.tar.bz2
 Source1:	ftp://download.sourceforge.net/pub/sourceforge/mesa3d/MesaLib-%{mesa_version}.tar.bz2
 Patch1:		%{name}-DESTDIR.patch
@@ -36,7 +40,7 @@ acceleration for following chipsets is supported:
 
 %description -l pl
 Utah-GLX jest modu≥em implementuj±cym protokÛ≥ GLX dla XFree 3.3.x
-Pakiet zawiera takøe biblioteki OpenGL wykoøystuj±ce GLX. SprzÍtowa
+Pakiet zawiera takøe biblioteki OpenGL wykorzystuj±ce GLX. SprzÍtowa
 akceleracja jest obs≥ugiwana dla nastÍpuj±cych uk≥adÛw:
  - nVidia's Riva 128, Riva TNT oraz Riva TNT2
  - Matrox's G200 and G400
@@ -50,8 +54,12 @@ Summary:	Development environment for Utah-GLX
 Summary(pl):	¶rodowisko programistyczne Utah-GLX
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 Provides:	Mesa-devel
 
