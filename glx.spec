@@ -12,10 +12,10 @@ Patch1:		%{name}-DESTDIR.patch
 Patch2:		%{name}-no_glut_headers.patch
 URL:		http://utah-glx.sourceforge.net
 Requires:	XFree86 >= 3.3.5
-Provides:	OpenGL 
+Provides:	OpenGL
 BuildRequires:	XFree86-devel
-BuildRequires:	perl	
-BuildRequires:	tcl	
+BuildRequires:	perl
+BuildRequires:	tcl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -52,7 +52,7 @@ Provides:	Mesa-devel
 %description devel
 Header files and documentation needed for development.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumentacja do Utah-GLX.
 
 %prep
@@ -91,7 +91,7 @@ CFLAGS="%{rpmcflags}" \
 	--with-3dnow-asm="no" \
     	--disable-mtrr \
 %endif
-	
+
 %{__make} depend
 %{__make}
 
@@ -104,7 +104,7 @@ install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}/modules,%{_sysconfdir}/X11}
 
 gzip -9nf docs/{README.*,*.txt} CHANGELOG README LICENSE New-Bugs \
 	Bugs-ToDo HISTORY
-	
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -113,7 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz docs/*.gz 
+%doc *.gz docs/*.gz
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %attr(755,root,root) %{_libdir}/modules/*
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/X11/*
