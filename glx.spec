@@ -10,7 +10,7 @@ Group(de):	X11/Libraries
 Group(es):	X11/Bibliotecas
 Group(pl):	X11/Biblioteki
 Source0:	%{name}-%{version}.tar.bz2
-Source1:	ftp://ftp.mesa3d.org/mesa/MesaLib-%{mesa_version}.tar.bz2
+Source1:	ftp://download.sourceforge.net/pub/sourceforge/mesa3d/MesaLib-%{mesa_version}.tar.bz2
 Patch1:		%{name}-DESTDIR.patch
 Patch2:		%{name}-no_glut_headers.patch
 URL:		http://utah-glx.sourceforge.net
