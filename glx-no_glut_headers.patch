@@ -1,0 +1,12 @@
+diff -durN glx-20000407.orig/include/GL/Makefile.in glx-20000407/include/GL/Makefile.in
+--- glx-20000407.orig/include/GL/Makefile.in	Sun Oct 31 14:57:53 1999
++++ glx-20000407/include/GL/Makefile.in	Sun Apr 16 14:32:50 2000
+@@ -14,7 +14,7 @@
+ # ---------------
+ GLX_HEADERS = glx.h
+ PRIV_HEADERS = GLXproto.h
+-MESA_HEADERS = gl.h glu.h glut.h glutf90.h
++MESA_HEADERS = gl.h glu.h
+ HEADERS = ${GLX_HEADERS} ${MESA_HEADERS}
+ 
+ .PHONY: ${MESA_HEADERS}

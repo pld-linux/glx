@@ -1,0 +1,36 @@
+diff -durN glx-20000407.orig/Make.options.in glx-20000407/Make.options.in
+--- glx-20000407.orig/Make.options.in	Fri Mar 31 06:26:15 2000
++++ glx-20000407/Make.options.in	Sat Apr 15 15:23:41 2000
+@@ -34,12 +34,12 @@
+ sysconfdir = @sysconfdir@
+ exec_prefix = @exec_prefix@
+ 
+-INSTALL_prefix = ${prefix}
+-INSTALL_bindir = @bindir@
+-INSTALL_sbindir = @sbindir@
+-INSTALL_includedir = @includedir@
+-INSTALL_libdir = @libdir@
+-INSTALL_mandir = @mandir@
++INSTALL_prefix = $(DESTDIR)${prefix}
++INSTALL_bindir = $(DESTDIR)@bindir@
++INSTALL_sbindir = $(DESTDIR)@sbindir@
++INSTALL_includedir = $(DESTDIR)@includedir@
++INSTALL_libdir = $(DESTDIR)@libdir@
++INSTALL_mandir = $(DESTDIR)@mandir@
+ INSTALL_moduledir = ${INSTALL_libdir}/modules
+ 
+ # These are the root directories for the X and MesaLib source trees
+diff -durN glx-20000407.orig/Makefile.in glx-20000407/Makefile.in
+--- glx-20000407.orig/Makefile.in	Wed Mar 22 06:25:59 2000
++++ glx-20000407/Makefile.in	Sat Apr 15 15:24:28 2000
+@@ -39,8 +39,8 @@
+ 	for i in ${SUBDIRS} ;   do \
+ 		( cd $$i && ${MAKE} $@ ) || exit 1; \
+ 	done
+-	test -s ${sysconfdir}/glx.conf || \
+-		${INSTALL} -m 644 glx.conf ${sysconfdir}/glx.conf
++	test -s $(DESTDIR)${sysconfdir}/glx.conf || \
++		${INSTALL} -m 644 glx.conf $(DESTDIR)${sysconfdir}/glx.conf
+ 
+ real-clean:
+ 	${RM} config.status
