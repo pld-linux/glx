@@ -1,14 +1,18 @@
 %define		mesa_version	3.1
 Summary:	Utah-GLX modules and libraries
+Summary(pl):	Modu³y i biblioteki Utah-GLX
 Name:		glx
 Version:	20000407
 Release:	1
 Copyright:	Custom
 Group:		X11/Libraries
+Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
+Group(pl):	X11/Biblioteki
 Source0:	%{name}-%{version}.tar.bz2
 Source1:	ftp://ftp.mesa3d.org/mesa/MesaLib-%{mesa_version}.tar.bz2
-Patch1:		glx-DESTDIR.patch
-Patch2:		glx-no_glut_headers.patch
+Patch1:		%{name}-DESTDIR.patch
+Patch2:		%{name}-no_glut_headers.patch
 URL:		http://utah-glx.sourceforge.net
 Requires:	XFree86 >= 3.3.5
 Provides:	OpenGL 
@@ -45,6 +49,7 @@ akceleracja jest obs³ugiwana dla nastêpuj±cych uk³adów:
 Summary:	Development environment for Utah-GLX
 Summary(pl):	¦rodowisko programistyczne Utah-GLX
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -62,7 +67,7 @@ Pliki nag³ówkowe i dokumentacja do Utah-GLX.
 %patch2 -p1
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" \
+CFLAGS="%{rpmcflags}" \
 ./autogen.sh \
 	--prefix=%{_prefix} \
 	--with-mesa="./Mesa-%{mesa_version}" \
