@@ -94,7 +94,7 @@ CFLAGS="$RPM_OPT_FLAGS" \
 %endif
 	
 %{__make} depend
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
