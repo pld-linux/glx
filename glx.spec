@@ -1,4 +1,3 @@
-# $Revision $, $Date $
 %define		mesa_version	3.1
 Summary:	Utah-GLX modules and libraries
 Name:		glx
@@ -6,7 +5,7 @@ Version:	20000407
 Release:	1
 Copyright:	Custom
 Group:		X11/Libraries
-Source:		%{name}-%{version}.tar.bz2	
+Source0:	%{name}-%{version}.tar.bz2
 Source1:	ftp://ftp.mesa3d.org/mesa/MesaLib-%{mesa_version}.tar.bz2
 Patch1:		glx-DESTDIR.patch
 Patch2:		glx-no_glut_headers.patch
@@ -21,31 +20,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-Utah-GLX is a module providing GLX protocol support to XFree 3.3.x.
-The package contains also OpenGL libraries making use of it.
-Hardware acceleration for following chipsets is supported:
-	- nVidia's Riva 128, Riva TNT and Riva TNT2
-	- Matrox's G200 and G400
-	- ATI's 3D Rage Pro
-	- i810
-	- S3 ViRGE
-	- SiS 6326
+Utah-GLX is a module providing GLX protocol support to XFree 3.3.x. The
+package contains also OpenGL libraries making use of it. Hardware
+acceleration for following chipsets is supported:
+ - nVidia's Riva 128, Riva TNT and Riva TNT2
+ - Matrox's G200 and G400
+ - ATI's 3D Rage Pro
+ - i810
+ - S3 ViRGE
+ - SiS 6326
 
 %description -l pl
-Utah-GLX jest modu³em implementuj±cym protokó³ GLX dla XFree 3.3.x
-Pakiet zawiera tak¿e biblioteki OpenGL wyko¿ystuj±ce GLX.
-Sprzêtowa akceleracja jest obs³ugiwana dla nastêpuj±cych uk³adów:
-	- nVidia's Riva 128, Riva TNT oraz Riva TNT2
-	- Matrox's G200 and G400
-	- ATI's 3D Rage Pro
-	- i810
-	- S3 ViRGE
-	- SiS 6326
+Utah-GLX jest modu³em implementuj±cym protokó³ GLX dla XFree 3.3.x Pakiet
+zawiera tak¿e biblioteki OpenGL wyko¿ystuj±ce GLX. Sprzêtowa akceleracja
+jest obs³ugiwana dla nastêpuj±cych uk³adów:
+ - nVidia's Riva 128, Riva TNT oraz Riva TNT2
+ - Matrox's G200 and G400
+ - ATI's 3D Rage Pro
+ - i810
+ - S3 ViRGE
+ - SiS 6326
 
 %package devel
 Summary:	Development environment for Utah-GLX
 Summary(pl):	¦rodowisko programistyczne Utah-GLX
 Group:		Development/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 Provides:	Mesa-devel
@@ -116,6 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz docs/*.gz 
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %attr(755,root,root) %{_libdir}/modules/*
+%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/X11/*
 
 %files devel
 %defattr(644,root,root,755)
