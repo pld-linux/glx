@@ -6,13 +6,6 @@ Version:	20000407
 Release:	1
 License:	Custom
 Group:		X11/Libraries
-Group(de):	X11/Libraries
-Group(es):	X11/Bibliotecas
-Group(fr):	X11/Librairies
-Group(pl):	X11/Biblioteki
-Group(pt_BR):	X11/Bibliotecas
-Group(ru):	X11/Библиотеки
-Group(uk):	X11/Б╕бл╕отеки
 Source0:	%{name}-%{version}.tar.bz2
 Source1:	ftp://download.sourceforge.net/pub/sourceforge/mesa3d/MesaLib-%{mesa_version}.tar.bz2
 Patch1:		%{name}-DESTDIR.patch
@@ -53,13 +46,6 @@ akceleracja jest obsЁugiwana dla nastЙpuj╠cych ukЁadСw:
 Summary:	Development environment for Utah-GLX
 Summary(pl):	╕rodowisko programistyczne Utah-GLX
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Provides:	Mesa-devel
 
