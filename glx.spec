@@ -11,7 +11,7 @@ Patch1:		glx-DESTDIR.patch
 Patch2:		glx-no_glut_headers.patch
 URL:		http://utah-glx.sourceforge.net
 Requires:	XFree86 >= 3.3.5
-Provides:	Mesa 
+Provides:	OpenGL 
 BuildRequires:	XFree86-devel
 BuildRequires:	perl	
 BuildRequires:	tcl	
