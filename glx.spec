@@ -7,6 +7,7 @@ Release:	1
 License:	custom
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	e822567d4f92a5f864b736f92df35d48
 Source1:	http://dl.sourceforge.net/mesa3d/MesaLib-%{mesa_version}.tar.bz2
 # Source1-md5:	58292669606fd6b06ee109b790c14c1c
 Patch1:		%{name}-DESTDIR.patch
