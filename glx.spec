@@ -102,9 +102,6 @@ install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}/modules,%{_sysconfdir}/X11}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf docs/{README.*,*.txt} CHANGELOG README LICENSE New-Bugs \
-	Bugs-ToDo HISTORY
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -113,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz docs/*.gz
+%doc docs/{README.*,*.txt} CHANGELOG README LICENSE New-Bugs Bugs-ToDo HISTORY
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %attr(755,root,root) %{_libdir}/modules/*
 %config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/X11/*
