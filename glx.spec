@@ -8,6 +8,7 @@ License:	custom
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 Source1:	http://dl.sourceforge.net/mesa3d/MesaLib-%{mesa_version}.tar.bz2
+# Source1-md5:	58292669606fd6b06ee109b790c14c1c
 Patch1:		%{name}-DESTDIR.patch
 Patch2:		%{name}-no_glut_headers.patch
 URL:		http://utah-glx.sourceforge.net/
