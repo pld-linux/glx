@@ -4,7 +4,7 @@ Summary(pl):	Modu³y i biblioteki Utah-GLX
 Name:		glx
 Version:	20000407
 Release:	1
-License:	Custom
+License:	custom
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
 Source1:	ftp://download.sourceforge.net/pub/sourceforge/mesa3d/MesaLib-%{mesa_version}.tar.bz2
