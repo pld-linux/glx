@@ -18,7 +18,6 @@ BuildRequires:	perl
 BuildRequires:	tcl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Utah-GLX is a module providing GLX protocol support to XFree 3.3.x.
