@@ -7,17 +7,16 @@ Release:	1
 License:	custom
 Group:		X11/Libraries
 Source0:	%{name}-%{version}.tar.bz2
-Source1:	ftp://download.sourceforge.net/pub/sourceforge/mesa3d/MesaLib-%{mesa_version}.tar.bz2
+Source1:	http://dl.sourceforge.net/mesa3d/MesaLib-%{mesa_version}.tar.bz2
 Patch1:		%{name}-DESTDIR.patch
 Patch2:		%{name}-no_glut_headers.patch
 URL:		http://utah-glx.sourceforge.net/
-Requires:	XFree86 >= 3.3.5
-Provides:	OpenGL
 BuildRequires:	XFree86-devel
 BuildRequires:	perl
 BuildRequires:	tcl
+Requires:	XFree86 >= 3.3.5
+Provides:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Utah-GLX is a module providing GLX protocol support to XFree 3.3.x.
