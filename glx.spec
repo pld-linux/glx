@@ -93,7 +93,7 @@ CFLAGS="$RPM_OPT_FLAGS" \
     	--disable-mtrr \
 %endif
 	
-make depend
+%{__make} depend
 make
 
 %install
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}/modules,%{_sysconfdir}/X11}
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf docs/{README.*,*.txt} CHANGELOG README LICENSE New-Bugs \
 	Bugs-ToDo HISTORY
