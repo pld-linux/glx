@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-Utah-GLX is a module providing GLX protocol support to XFree 3.3.x. The
-package contains also OpenGL libraries making use of it. Hardware
+Utah-GLX is a module providing GLX protocol support to XFree 3.3.x.
+The package contains also OpenGL libraries making use of it. Hardware
 acceleration for following chipsets is supported:
  - nVidia's Riva 128, Riva TNT and Riva TNT2
  - Matrox's G200 and G400
@@ -31,9 +31,9 @@ acceleration for following chipsets is supported:
  - SiS 6326
 
 %description -l pl
-Utah-GLX jest modu³em implementuj±cym protokó³ GLX dla XFree 3.3.x Pakiet
-zawiera tak¿e biblioteki OpenGL wyko¿ystuj±ce GLX. Sprzêtowa akceleracja
-jest obs³ugiwana dla nastêpuj±cych uk³adów:
+Utah-GLX jest modu³em implementuj±cym protokó³ GLX dla XFree 3.3.x
+Pakiet zawiera tak¿e biblioteki OpenGL wyko¿ystuj±ce GLX. Sprzêtowa
+akceleracja jest obs³ugiwana dla nastêpuj±cych uk³adów:
  - nVidia's Riva 128, Riva TNT oraz Riva TNT2
  - Matrox's G200 and G400
  - ATI's 3D Rage Pro
@@ -97,18 +97,19 @@ make depend
 make
 
 %install
+rm -rf $RPM_BUILD_ROOT
 
-install -d  $RPM_BUILD_ROOT{%{_includedir},%{_libdir}/modules,%{_sysconfdir}/X11}
+install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}/modules,%{_sysconfdir}/X11}
 
-make install DESTDIR="$RPM_BUILD_ROOT"
+make install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf docs/{README.*,*.txt} CHANGELOG README LICENSE New-Bugs \
-	Bugs-ToDo HISTORY || :
+	Bugs-ToDo HISTORY
 	
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
+%post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
