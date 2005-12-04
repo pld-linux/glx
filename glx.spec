@@ -100,7 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}/modules,%{_sysconfdir}/X11}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -113,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/{README.*,*.txt} CHANGELOG README LICENSE New-Bugs Bugs-ToDo HISTORY
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %attr(755,root,root) %{_libdir}/modules/*
-%config(noreplace) %verify(not md5 size mtime) %{_sysconfdir}/X11/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/*
 
 %files devel
 %defattr(644,root,root,755)
