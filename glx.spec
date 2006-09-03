@@ -46,7 +46,7 @@ akceleracja jest obs³ugiwana dla nastêpuj±cych uk³adów:
 Summary:	Development environment for Utah-GLX
 Summary(pl):	¦rodowisko programistyczne Utah-GLX
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Provides:	Mesa-devel
 
 %description devel
@@ -74,22 +74,22 @@ CFLAGS="%{rpmcflags}" \
   %ifarch i686 \
 	--with-mmx-asm="yes" \
 	--with-3dnow-asm="no" \
-    	--enable-mtrr \
+		--enable-mtrr \
   %else \
-    %ifarch k6 \
+	%ifarch k6 \
 	--with-mmx-asm="yes" \
 	--with-3dnow-asm="yes" \
-    %else \
+	%else \
 	--with-mmx-asm="no" \
 	--with-3dnow-asm="no" \
-    %endif \
-    	--disable-mtrr \
+	%endif \
+		--disable-mtrr \
   %endif \
 %else \
 	--with-x86-asm="no" \
 	--with-mmx-asm="no" \
 	--with-3dnow-asm="no" \
-    	--disable-mtrr \
+		--disable-mtrr \
 %endif
 
 %{__make} depend
