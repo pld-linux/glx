@@ -1,6 +1,6 @@
 %define		mesa_version	3.1
 Summary:	Utah-GLX modules and libraries
-Summary(pl):	Modu³y i biblioteki Utah-GLX
+Summary(pl.UTF-8):   ModuÅ‚y i biblioteki Utah-GLX
 Name:		glx
 Version:	20000407
 Release:	1
@@ -31,10 +31,10 @@ acceleration for following chipsets is supported:
  - S3 ViRGE
  - SiS 6326
 
-%description -l pl
-Utah-GLX jest modu³em implementuj±cym protokó³ GLX dla XFree 3.3.x
-Pakiet zawiera tak¿e biblioteki OpenGL wykorzystuj±ce GLX. Sprzêtowa
-akceleracja jest obs³ugiwana dla nastêpuj±cych uk³adów:
+%description -l pl.UTF-8
+Utah-GLX jest moduÅ‚em implementujÄ…cym protokÃ³Å‚ GLX dla XFree 3.3.x
+Pakiet zawiera takÅ¼e biblioteki OpenGL wykorzystujÄ…ce GLX. SprzÄ™towa
+akceleracja jest obsÅ‚ugiwana dla nastÄ™pujÄ…cych ukÅ‚adÃ³w:
  - nVidia's Riva 128, Riva TNT oraz Riva TNT2
  - Matrox's G200 and G400
  - ATI's 3D Rage Pro
@@ -44,7 +44,7 @@ akceleracja jest obs³ugiwana dla nastêpuj±cych uk³adów:
 
 %package devel
 Summary:	Development environment for Utah-GLX
-Summary(pl):	¦rodowisko programistyczne Utah-GLX
+Summary(pl.UTF-8):   Åšrodowisko programistyczne Utah-GLX
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Provides:	Mesa-devel
@@ -52,8 +52,8 @@ Provides:	Mesa-devel
 %description devel
 Header files and documentation needed for development.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja do Utah-GLX.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja do Utah-GLX.
 
 %prep
 %setup -q -a 1
