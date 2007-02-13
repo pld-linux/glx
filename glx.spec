@@ -1,6 +1,6 @@
 %define		mesa_version	3.1
 Summary:	Utah-GLX modules and libraries
-Summary(pl.UTF-8):   Moduły i biblioteki Utah-GLX
+Summary(pl.UTF-8):	Moduły i biblioteki Utah-GLX
 Name:		glx
 Version:	20000407
 Release:	1
@@ -44,7 +44,7 @@ akceleracja jest obsługiwana dla następujących układów:
 
 %package devel
 Summary:	Development environment for Utah-GLX
-Summary(pl.UTF-8):   Środowisko programistyczne Utah-GLX
+Summary(pl.UTF-8):	Środowisko programistyczne Utah-GLX
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Provides:	Mesa-devel
